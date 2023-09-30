@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kids Game Arena</title>
+
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/stylemenu.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+	<header id="top_header" class="clearfix">
+
+		<div class="wrapper">
+			
+
+			<a class="navbar-brand" href="index.html">
+
+				<img src="images/logo.png" alt="Logo" title="Kids Game Arena" style="height:35px;"/>
+
+
+				<div class="use">
+                <div class="action">
+                        <div class="profile" onclick="menu();">
+                            <a href="#"></a><img src="images/user.png" id = "use" width="25px" height="25px"></a>
+                        </div>
+                        <div class="menu">
+                        	<h3>Welcome<br><span></h3><h2>Let's Play!</span></h2>
+                            
+                            <ul>
+                                
+								<li><img src="images/login.png"><a href="login.php">Login</a></li>
+								<li><img src="images/register.png"><a href="registeruser.php">Sign Up</a></li>
+							</ul>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function menu()
+                    {
+                        const toggle = document.querySelector('.menu');
+                        toggle.classList.toggle('active');
+                    }
+                </script>
+			</a> 
+		
+			<a href="#" class="menun"><i class="fa fa-bars"></i></a>
+			<nav id="main_nav">
+
+				<a href="popgames.html">Popular Games</a>
+				<a href="newgames.html">New Games</a>
+				<a href="multigames.html">Multiplayer Games</a>
+				<a href="contactus.html">Contact Us</a>
+
+			</nav>
+		</div>
+	</header>
+
+	<section id="banner" class="clearfix">
+		<div id="banner_content_wrapper">
+			<div id="poster">
+				<img src="images/Banners/1st.jpg" alt="Kart game" class="featured_image">
+				
+				<img src="images/play_button.png" alt="Play Trailer" class="play_button">
+			</div>
+			<div id="content">
+				<h2 class="title">Kart Racers</h2>
+				<div class="ratings">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star inactive"></i>
+				</div>
+
+				<p class="description">Nickelodeon Kart Racers : Grand Prix is a racing video game developed by Bamtang Games and published by GameMill Entertainment in North America, Maximum Games in Europe, and Ripples Asia Venture in Japan.</p>
+
+				<p class="info">13+ <span>|</span> New <span>|</span> Action, Adventure<span>|</span> 5 May 2022</p>
+			</div>
+		</div>
+	</section>
+    
+    <div class="search-box" title="Search">
+      <input type="text" placeholder="Type to search..">
+      <div class="search-icon">
+        <i class="fas fa-search"></i>
+      </div>
+<div class="cancel-icon">
+        <i class="fas fa-times"></i>
+      </div>
+<div class="search-data">
+</div>
+</div>
+<script>
+      const searchBox = document.querySelector(".search-box");
+      const searchBtn = document.querySelector(".search-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const searchInput = document.querySelector("input");
+      const searchData = document.querySelector(".search-data");
+      searchBtn.onclick =()=>{
+        searchBox.classList.add("active");
+        searchBtn.classList.add("active");
+        searchInput.classList.add("active");
+        cancelBtn.classList.add("active");
+        searchInput.focus();
+        if(searchInput.value != ""){
+          var values = searchInput.value;
+          searchData.classList.remove("active");
+          searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+        }else{
+          searchData.textContent = "";
+        }
+      }
+      cancelBtn.onclick =()=>{
+        searchBox.classList.remove("active");
+        searchBtn.classList.remove("active");
+        searchInput.classList.remove("active");
+        cancelBtn.classList.remove("active");
+        searchData.classList.toggle("active");
+        searchInput.value = "";
+      }
+    </script>
+     
+     
+
+
+	<section id="games-barfirst" class="gamearena">
+		<div class="wrapper">
+
+			<header class="gamearena">
+
+				<h2>Popular Games</h2> <i class='fa fa-fire' style='font-size:24px'></i>
+				<a href="#"><p class="view_more">View All Games</p></a>
+
+			</header>
+
+			<div class="row">
+				<div class="post">
+					<img src="images/Img/Popular/1.jpg" alt="The Martian">
+					<h3 class="title">Ratchet Clank</h3>
+					<p class="post_info">13+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Popular/2.jpg" alt="Inside Out">
+					<h3 class="title">On a Roll</h3>
+					<p class="post_info">13+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Popular/3.jpg" alt="Jurassic World">
+					<h3 class="title">Mighty Pups</h3>
+					<p class="post_info">14+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Popular/4.jpg" alt="Mad Max">
+					<h3 class="title">The Incredibles</h3>
+					<p class="post_info">14+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Popular/5.jpg" alt="Star Wars">
+					<h3 class="title">Rainy Brains</h3>
+					<p class="post_info">14+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Popular/6.jpg" alt="The Avengers">
+					<h3 class="title">Super Heros</h3>
+					<p class="post_info">15+</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="games-barsecond" class="gamearena">
+		<div class="wrapper">
+			<header class="gamearena">
+				<h2>Mathamatics Games</h2>
+				<a href="#"><p class="view_more">View All Games</p></a>
+			</header>
+
+			<div class="row">
+				<div class="post">
+					<img src="images/Img/New/7.jpg" alt="The Walking Dead">
+					<h3 class="title">Sonic Forces</h3>
+					<p class="post_info">11+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/New/8.jpg" alt="Game Of Thrones">
+					<h3 class="title">Spyro</h3>
+					<p class="post_info">11+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/New/9.jpg" alt="Breaking Bad">
+					<h3 class="title">Jungle Book</h3>
+					<p class="post_info">11+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/New/10.jpg" alt="Empire">
+					<h3 class="title">Overcooked</h3>
+					<p class="post_info">13+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/New/11.jpg" alt="Master of None">
+					<h3 class="title">Nitro Fueled</h3>
+					<p class="post_info">12+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/New/12.jpg" alt="Mr Robot">
+					<h3 class="title">Family Funpack</h3>
+					<p class="post_info">13+</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+		<section id="games-barfirst" class="gamearena">
+		<div class="wrapper">
+
+			<header class="gamearena">
+				<h2>Science Games</h2>
+				<a href="#"><p class="view_more">View All Games</p></a>
+			</header>
+
+			<div class="row">
+				<div class="post">
+					<img src="images/Img/Multiplayer/13.jpg" alt="The Martian">
+					<h3 class="title">Lego</h3>
+					<p class="post_info">11+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Multiplayer/14.jpg" alt="Inside Out">
+					<h3 class="title">Ninjago</h3>
+					<p class="post_info">13+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Multiplayer/15.jpg" alt="Jurassic World">
+					<h3 class="title">Futty Squiad</h3>
+					<p class="post_info">13+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Multiplayer/16.jpg" alt="Mad Max">
+					<h3 class="title">Clank Rhttechet</h3>
+					<p class="post_info">12+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Multiplayer/17.jpg" alt="Star Wars">
+					<h3 class="title">Jurassic World</h3>
+					<p class="post_info">14+</p>
+				</div>
+			
+				<div class="post">
+					<img src="images/Img/Multiplayer/18.jpg" alt="The Avengers">
+					<h3 class="title">Adventure City</h3>
+					<p class="post_info">14+</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+    
+	<section id="footer">
+
+		
+		<footer id="main_footer">
+		<a href="#"><img src="images/logofooter.png" alt="Logo" title="Kids Game Arena" style="height:35px;"/></a>
+		<p class="copyright">&copy;2022 Kids Game Arena. All Rights Reserved.</p>
+		<div class="links">
+			<a href="#">Terms of Service</a>
+			<a href="#">Privacy Policy</a>
+			
+		</div>
+		    <div class="social">
+		    <a href="https://www.facebook.com"><img src="images/facebook.png" alt="Facebook" title="Facebook" style="height:25px;"/></a>
+			<a href="https://www.instagram.com"><img src="images/instagram.png" alt="Instagram" title="Instagram" style="height:25px;"/></a>
+			<a href="https://twitter.com"><img src="images/twitter.png" alt="Twitter" title="Twitter" style="height:25px;"/></a>
+		</div>
+		
+			
+	</footer>
+	</section>
+
+</body>
+</html>
